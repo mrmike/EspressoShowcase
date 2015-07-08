@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .gradle
 /local.properties
 /.idea/workspace.xml
@@ -36,6 +37,7 @@ proguard/
 
 # Log Files
 *.log
+<<<<<<< HEAD
 
 ### Android Patch ###
 gen-external-apklibs
