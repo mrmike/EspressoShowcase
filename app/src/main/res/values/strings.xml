@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Showcase</string>
+
+    <string name="title">Espresso showcase</string>
+    <string name="hint">Enter input</string>
+    <string name="speech">Speech recognition</string>
+    <string name="action">Make action</string>
+
+</resources>
