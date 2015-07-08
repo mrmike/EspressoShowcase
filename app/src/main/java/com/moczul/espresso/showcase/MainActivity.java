@@ -106,7 +106,9 @@ public class MainActivity extends AppCompatActivity implements Observer<String> 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        mSubscription.unsubscribe();
+        if (mSubscription != null) {
+            mSubscription.unsubscribe();
+        }
     }
 
     private void sleep(int ms) {

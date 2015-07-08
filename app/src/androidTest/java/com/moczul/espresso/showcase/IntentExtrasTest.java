@@ -25,13 +25,13 @@ public class IntentExtrasTest {
     @Before
     public void setUp() {
         Intent intent = new Intent();
-        intent.putExtra(MainActivity.EXTRA_TITLE, "ADG Poznań");
+        intent.putExtra(MainActivity.EXTRA_TITLE, "ADG Poznan");
         mRule.launchActivity(intent);
     }
 
     @Test
     public void testCustomTitle() {
-        onView(withText("ADG Poznań")).check(matches(isDisplayed()));
+        onView(withText("ADG Poznan")).check(matches(isDisplayed()));
     }
 
     @Test
