@@ -82,7 +82,7 @@ public class SchedulerMonitor implements IdlingResource {
 
     @Override
     public String getName() {
-        return "BoltsExecutorMonitor";
+        return "SchedulerMonitor";
     }
 
     @Override
