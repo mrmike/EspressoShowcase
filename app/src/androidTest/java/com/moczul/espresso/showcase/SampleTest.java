@@ -17,7 +17,7 @@ import static com.moczul.espresso.showcase.matchers.CustomMatcher.hasVisibleCurs
 import static org.hamcrest.CoreMatchers.allOf;
 
 @RunWith(AndroidJUnit4.class)
-public class BaseTest {
+public class SampleTest {
 
     @Rule
     public ActivityTestRule<MainActivity> mRule = new ActivityTestRule<>(MainActivity.class);
