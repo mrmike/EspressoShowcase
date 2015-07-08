@@ -21,7 +21,6 @@ import static android.support.test.espresso.intent.Intents.intended;
 import static android.support.test.espresso.intent.Intents.intending;
 import static android.support.test.espresso.intent.matcher.IntentMatchers.hasAction;
 import static android.support.test.espresso.intent.matcher.IntentMatchers.hasExtraWithKey;
-import static android.support.test.espresso.intent.matcher.IntentMatchers.toPackage;
 import static android.support.test.espresso.matcher.ViewMatchers.isClickable;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
@@ -43,14 +42,14 @@ public class MockedIntentTest {
 
     private Intent getResultIntent() {
         final ArrayList<String> results = new ArrayList<>();
-        results.add("ADG Poznań");
+        results.add("ADG Poznan");
         Intent intent = new Intent();
         intent.putStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS, results);
         return intent;
     }
 
     @Test
-    public void testSpeechToRecognition() throws InterruptedException {
+    public void testSpeechToRecognition() {
         onView(withText(R.string.speech)).check(matches(isClickable()));
         onView(withText(R.string.speech)).perform(click());
 
@@ -59,6 +58,6 @@ public class MockedIntentTest {
                 hasExtraWithKey(RecognizerIntent.EXTRA_LANGUAGE_MODEL)
         ));
 
-        onView(withId(R.id.text_input)).check(matches(hasText("ADG Poznań")));
+        onView(withId(R.id.text_input)).check(matches(hasText("ADG Poznan")));
     }
 }

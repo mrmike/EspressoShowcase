@@ -1,6 +1,8 @@
 package com.moczul.espresso.showcase;
 
+import android.os.Build;
 import android.support.test.espresso.Espresso;
+import android.support.test.filters.SdkSuppress;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
@@ -22,6 +24,7 @@ public class SyncFailingTest {
     public ActivityTestRule<MainActivity> mRule = new ActivityTestRule<>(MainActivity.class);
 
     @Test
+    @SdkSuppress(minSdkVersion = Build.VERSION_CODES.LOLLIPOP)
     public void failingTest() {
         onView(withId(R.id.text_input)).perform(typeText("ADG-Poznan"));
         onView(withId(R.id.action)).perform(click());
