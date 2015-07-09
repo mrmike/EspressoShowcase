@@ -13,8 +13,9 @@ import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withHint;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
-import static com.moczul.espresso.showcase.matchers.CustomMatcher.hasVisibleCursor;
+import static com.moczul.espresso.showcase.matchers.CustomMatchers.hasVisibleCursor;
 import static org.hamcrest.CoreMatchers.allOf;
+import static org.hamcrest.CoreMatchers.anyOf;
 
 @RunWith(AndroidJUnit4.class)
 public class SampleTest {
@@ -36,6 +37,12 @@ public class SampleTest {
     public void testAllOf() {
         onView(allOf(withHint(R.string.hint), withId(R.id.text_input),
                 hasVisibleCursor())).check(matches(isDisplayed()));
+    }
+
+    @Test
+    public void testAnyOf() {
+        onView(anyOf(withHint(R.string.hint), withId(R.id.title)))
+                .check(matches(isDisplayed()));
     }
 
 }

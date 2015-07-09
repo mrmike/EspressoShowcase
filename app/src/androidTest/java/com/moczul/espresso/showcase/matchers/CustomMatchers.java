@@ -8,7 +8,7 @@ import android.widget.TextView;
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
 
-public class CustomMatcher {
+public class CustomMatchers {
 
     public static Matcher<View> hasVisibleCursor() {
         return new BoundedMatcher<View, EditText>(EditText.class) {

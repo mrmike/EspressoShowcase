@@ -14,10 +14,10 @@ import org.junit.runner.RunWith;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
-import static android.support.test.espresso.action.ViewActions.typeText;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
-import static com.moczul.espresso.showcase.matchers.CustomMatcher.hasText;
+import static com.moczul.espresso.showcase.actions.CustomActions.text;
+import static com.moczul.espresso.showcase.matchers.CustomMatchers.hasText;
 
 @RunWith(AndroidJUnit4.class)
 public class SyncDoneRightTest {
@@ -35,7 +35,7 @@ public class SyncDoneRightTest {
 
     @Test
     public void syncTest() {
-        onView(withId(R.id.text_input)).perform(typeText("ADG-Poznan"));
+        onView(withId(R.id.text_input)).perform(text("ADG-Poznan"));
         onView(withId(R.id.action)).perform(click());
 
         onView(withId(R.id.output)).check(matches(hasText("ADG-Poznan")));

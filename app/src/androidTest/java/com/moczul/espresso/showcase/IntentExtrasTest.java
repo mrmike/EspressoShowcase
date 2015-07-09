@@ -14,7 +14,7 @@ import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
-import static com.moczul.espresso.showcase.matchers.CustomMatcher.hasText;
+import static com.moczul.espresso.showcase.matchers.CustomMatchers.hasText;
 
 @RunWith(AndroidJUnit4.class)
 public class IntentExtrasTest {

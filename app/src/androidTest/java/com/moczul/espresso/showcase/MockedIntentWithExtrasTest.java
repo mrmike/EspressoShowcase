@@ -23,7 +23,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.isClickable;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
-import static com.moczul.espresso.showcase.matchers.CustomMatcher.hasText;
+import static com.moczul.espresso.showcase.matchers.CustomMatchers.hasText;
 
 public class MockedIntentWithExtrasTest {
 
