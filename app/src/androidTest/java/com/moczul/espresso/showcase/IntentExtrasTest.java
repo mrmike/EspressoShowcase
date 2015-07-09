@@ -36,6 +36,6 @@ public class IntentExtrasTest {
 
     @Test
     public void testCustomTitle2() {
-        onView(withId(R.id.title)).check(matches(hasText("ADG Poznań")));
+        onView(withId(R.id.title)).check(matches(hasText("ADG Poznan")));
     }
 }
