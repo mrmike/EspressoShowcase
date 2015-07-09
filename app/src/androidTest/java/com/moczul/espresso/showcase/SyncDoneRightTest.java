@@ -6,6 +6,7 @@ import android.support.test.runner.AndroidJUnit4;
 
 import com.moczul.espresso.showcase.monitor.SchedulerMonitor;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -24,10 +25,12 @@ public class SyncDoneRightTest {
     @Rule
     public ActivityTestRule<MainActivity> mRule = new ActivityTestRule<>(MainActivity.class);
 
+    private SchedulerMonitor mMonitor;
+
     @Before
     public void setUp() {
-        final SchedulerMonitor monitor = new SchedulerMonitor(PoolExecutor.get());
-        Espresso.registerIdlingResources(monitor);
+        mMonitor = new SchedulerMonitor(PoolExecutor.get());
+        Espresso.registerIdlingResources(mMonitor);
     }
 
     @Test
@@ -36,5 +39,10 @@ public class SyncDoneRightTest {
         onView(withId(R.id.action)).perform(click());
 
         onView(withId(R.id.output)).check(matches(hasText("ADG-Poznan")));
+    }
+
+    @After
+    public void tearDown() {
+        Espresso.unregisterIdlingResources(mMonitor);
     }
 }
