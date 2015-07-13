@@ -40,7 +40,7 @@ public class SampleTest {
     }
 
     @Test
-    public void testAnyOf() {
+    public void testAnyOfFailing() {
         onView(anyOf(withHint(R.string.hint), withId(R.id.title)))
                 .check(matches(isDisplayed()));
     }
