@@ -5,4 +5,4 @@ App prepared for Poznań Android Developer Group meetup - http://www.meetup.com/
 
 
 ### Slides
-https://speakerdeck.com/mrmike/espresso-ui-testing
+https://speakerdeck.com/mrmike/espresso-ui-testing-on-android
